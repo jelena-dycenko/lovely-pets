@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+		<title>LOVELY PETS</title>
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//s.w.org">
+
+
+<link rel="stylesheet" id="bootstrap-css" href="../wp-content/themes/hestia/assets/bootstrap/css/bootstrap.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="hestia-font-sizes-css" href="../wp-content/themes/hestia/assets/css/font-sizes.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="../wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-5-css" href="../wp-content/plugins/themeisle-companion/obfx_modules/gutenberg-blocks/assets/fontawesome/css/all.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-4-shims-css" href="../wp-content/plugins/themeisle-companion/obfx_modules/gutenberg-blocks/assets/fontawesome/css/v4-shims.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="themeisle-block_styles-css" href="../wp-content/plugins/themeisle-companion/vendor/codeinwp/gutenberg-blocks/build/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="hestia-clients-bar-css" href="../wp-content/plugins/themeisle-companion/obfx_modules/companion-legacy/assets/css/hestia/clients-bar.css" type="text/css" media="all">
+<link rel="stylesheet" id="hestia_style-css" href="../wp-content/themes/hestia/style.min.css" type="text/css" media="all">
+<style id="hestia_style-inline-css" type="text/css">
+.hestia-top-bar, .hestia-top-bar .widget.widget_shopping_cart .cart_list {
+			background-color: #363537
+		}
+		.hestia-top-bar .widget .label-floating input[type=search]:-webkit-autofill {
+			-webkit-box-shadow: inset 0 0 0px 9999px #363537
+		}.hestia-top-bar, .hestia-top-bar .widget .label-floating input[type=search], .hestia-top-bar .widget.widget_search form.form-group:before, .hestia-top-bar .widget.widget_product_search form.form-group:before, .hestia-top-bar .widget.widget_shopping_cart:before {
+			color: #ffffff
+		} 
+		.hestia-top-bar .widget .label-floating input[type=search]{
+			-webkit-text-fill-color:#ffffff !important 
+		}.hestia-top-bar a, .hestia-top-bar .top-bar-nav li a {
+			color: #ffffff
+		}.hestia-top-bar a:hover, .hestia-top-bar .top-bar-nav li a:hover {
+			color: #eeeeee
+		}
+	
+		a, 
+		.navbar .dropdown-menu li:hover > a,
+		.navbar .dropdown-menu li:focus > a,
+		.navbar .dropdown-menu li:active > a,
+		.navbar .navbar-nav > li .dropdown-menu li:hover > a,
+		body:not(.home) .navbar-default .navbar-nav > .active:not(.btn) > a,
+		body:not(.home) .navbar-default .navbar-nav > .active:not(.btn) > a:hover,
+		body:not(.home) .navbar-default .navbar-nav > .active:not(.btn) > a:focus,
+		a:hover, 
+		.card-blog a.moretag:hover, 
+		.card-blog a.more-link:hover, 
+		.widget a:hover,
+		.has-text-color.has-accent-color,
+		p.has-text-color a {
+		    color:#0da56d;
+		}
+		
+		.pagination span.current, .pagination span.current:focus, .pagination span.current:hover {
+			border-color:#0da56d
+		}
+		
+		button,
+		button:hover,
+		.woocommerce .track_order button[type="submit"],
+		.woocommerce .track_order button[type="submit"]:hover,
+		div.wpforms-container .wpforms-form button[type=submit].wpforms-submit,
+		div.wpforms-container .wpforms-form button[type=submit].wpforms-submit:hover,
+		input[type="button"],
+		input[type="button"]:hover,
+		input[type="submit"],
+		input[type="submit"]:hover,
+		input#searchsubmit, 
+		.pagination span.current, 
+		.pagination span.current:focus, 
+		.pagination span.current:hover,
+		.btn.btn-primary,
+		.btn.btn-primary:link,
+		.btn.btn-primary:hover, 
+		.btn.btn-primary:focus, 
+		.btn.btn-primary:active, 
+		.btn.btn-primary.active, 
+		.btn.btn-primary.active:focus, 
+		.btn.btn-primary.active:hover,
+		.btn.btn-primary:active:hover, 
+		.btn.btn-primary:active:focus, 
+		.btn.btn-primary:active:hover,
+		.hestia-sidebar-open.btn.btn-rose,
+		.hestia-sidebar-close.btn.btn-rose,
+		.hestia-sidebar-open.btn.btn-rose:hover,
+		.hestia-sidebar-close.btn.btn-rose:hover,
+		.hestia-sidebar-open.btn.btn-rose:focus,
+		.hestia-sidebar-close.btn.btn-rose:focus,
+		.label.label-primary,
+		.hestia-work .portfolio-item:nth-child(6n+1) .label,
+		.nav-cart .nav-cart-content .widget .buttons .button,
+		.has-accent-background-color[class*="has-background"] {
+		    background-color: #0da56d;
+		}
+		
+		@media (max-width: 768px) { 
+	
+			.navbar-default .navbar-nav>li>a:hover,
+			.navbar-default .navbar-nav>li>a:focus,
+			.navbar .navbar-nav .dropdown .dropdown-menu li a:hover,
+			.navbar .navbar-nav .dropdown .dropdown-menu li a:focus,
+			.navbar button.navbar-toggle:hover,
+			.navbar .navbar-nav li:hover > a i {
+			    color: #0da56d;
+			}
+		}
+		
+		body:not(.woocommerce-page) button:not([class^="fl-"]):not(.hestia-scroll-to-top):not(.navbar-toggle):not(.close),
+		body:not(.woocommerce-page) .button:not([class^="fl-"]):not(hestia-scroll-to-top):not(.navbar-toggle):not(.add_to_cart_button),
+		div.wpforms-container .wpforms-form button[type=submit].wpforms-submit,
+		input[type="submit"], 
+		input[type="button"], 
+		.btn.btn-primary,
+		.widget_product_search button[type="submit"],
+		.hestia-sidebar-open.btn.btn-rose,
+		.hestia-sidebar-close.btn.btn-rose,
+		.everest-forms button[type=submit].everest-forms-submit-button {
+		    -webkit-box-shadow: 0 2px 2px 0 rgba(13,165,109,0.14),0 3px 1px -2px rgba(13,165,109,0.2),0 1px 5px 0 rgba(13,165,109,0.12);
+		    box-shadow: 0 2px 2px 0 rgba(13,165,109,0.14),0 3px 1px -2px rgba(13,165,109,0.2),0 1px 5px 0 rgba(13,165,109,0.12);
+		}
+		
+		.card .header-primary, .card .content-primary,
+		.everest-forms button[type=submit].everest-forms-submit-button {
+		    background: #0da56d;
+		}
+		
+		body:not(.woocommerce-page) .button:not([class^="fl-"]):not(.hestia-scroll-to-top):not(.navbar-toggle):not(.add_to_cart_button):hover,
+		body:not(.woocommerce-page) button:not([class^="fl-"]):not(.hestia-scroll-to-top):not(.navbar-toggle):not(.close):hover,
+		div.wpforms-container .wpforms-form button[type=submit].wpforms-submit:hover,
+		input[type="submit"]:hover,
+		input[type="button"]:hover,
+		input#searchsubmit:hover, 
+		.widget_product_search button[type="submit"]:hover,
+		.pagination span.current, 
+		.btn.btn-primary:hover, 
+		.btn.btn-primary:focus, 
+		.btn.btn-primary:active, 
+		.btn.btn-primary.active, 
+		.btn.btn-primary:active:focus, 
+		.btn.btn-primary:active:hover, 
+		.hestia-sidebar-open.btn.btn-rose:hover,
+		.hestia-sidebar-close.btn.btn-rose:hover,
+		.pagination span.current:hover,
+		.everest-forms button[type=submit].everest-forms-submit-button:hover,
+ 		.everest-forms button[type=submit].everest-forms-submit-button:focus,
+ 		.everest-forms button[type=submit].everest-forms-submit-button:active {
+			-webkit-box-shadow: 0 14px 26px -12px rgba(13,165,109,0.42),0 4px 23px 0 rgba(0,0,0,0.12),0 8px 10px -5px rgba(13,165,109,0.2);
+		    box-shadow: 0 14px 26px -12px rgba(13,165,109,0.42),0 4px 23px 0 rgba(0,0,0,0.12),0 8px 10px -5px rgba(13,165,109,0.2);
+			color: #fff;
+		}
+		
+		.form-group.is-focused .form-control {
+			background-image: -webkit-gradient(linear,left top, left bottom,from(#0da56d),to(#0da56d)),-webkit-gradient(linear,left top, left bottom,from(#d2d2d2),to(#d2d2d2));
+			background-image: -webkit-linear-gradient(linear,left top, left bottom,from(#0da56d),to(#0da56d)),-webkit-linear-gradient(linear,left top, left bottom,from(#d2d2d2),to(#d2d2d2));
+			background-image: linear-gradient(linear,left top, left bottom,from(#0da56d),to(#0da56d)),linear-gradient(linear,left top, left bottom,from(#d2d2d2),to(#d2d2d2));
+		}
+		
+		.navbar:not(.navbar-transparent) li:not(.btn):hover > a,
+		.navbar li.on-section:not(.btn) > a, 
+		.navbar.full-screen-menu.navbar-transparent li:not(.btn):hover > a,
+		.navbar.full-screen-menu .navbar-toggle:hover,
+		.navbar:not(.navbar-transparent) .nav-cart:hover, 
+		.navbar:not(.navbar-transparent) .hestia-toggle-search:hover {
+				color:#0da56d}
+		
+		.header-filter-gradient { 
+			background: linear-gradient(45deg, rgba(3,117,113,1) 0%, rgb(69,145,92) 100%); 
+		}
+		.has-text-color.has-header-gradient-color { color: #037571; }
+		.has-header-gradient-background-color[class*="has-background"] { background-color: #037571; }
+		
+		.has-text-color.has-background-color-color { color: #ffffff; }
+		.has-background-color-background-color[class*="has-background"] { background-color: #ffffff; }
+		
+.btn.btn-primary:not(.colored-button):not(.btn-left):not(.btn-right):not(.btn-just-icon):not(.menu-item), input[type="submit"]:not(.search-submit), body:not(.woocommerce-account) .woocommerce .button.woocommerce-Button, .woocommerce .product button.button, .woocommerce .product button.button.alt, .woocommerce .product #respond input#submit, .woocommerce-cart .blog-post .woocommerce .cart-collaterals .cart_totals .checkout-button, .woocommerce-checkout #payment #place_order, .woocommerce-account.woocommerce-page button.button, .woocommerce .track_order button[type="submit"], .nav-cart .nav-cart-content .widget .buttons .button, .woocommerce a.button.wc-backward, body.woocommerce .wccm-catalog-item a.button, body.woocommerce a.wccm-button.button, form.woocommerce-form-coupon button.button, div.wpforms-container .wpforms-form button[type=submit].wpforms-submit, div.woocommerce a.button.alt, div.woocommerce table.my_account_orders .button, .btn.colored-button, .btn.btn-left, .btn.btn-right, .btn:not(.colored-button):not(.btn-left):not(.btn-right):not(.btn-just-icon):not(.menu-item):not(.hestia-sidebar-open):not(.hestia-sidebar-close){ padding-top:15px;  padding-bottom:15px;  padding-left:33px;  padding-right:33px; }
+.btn.btn-primary:not(.colored-button):not(.btn-left):not(.btn-right):not(.btn-just-icon):not(.menu-item), input[type="submit"]:not(.search-submit), body:not(.woocommerce-account) .woocommerce .button.woocommerce-Button, .woocommerce .product button.button, .woocommerce .product button.button.alt, .woocommerce .product #respond input#submit, .woocommerce-cart .blog-post .woocommerce .cart-collaterals .cart_totals .checkout-button, .woocommerce-checkout #payment #place_order, .woocommerce-account.woocommerce-page button.button, .woocommerce .track_order button[type="submit"], .nav-cart .nav-cart-content .widget .buttons .button, .woocommerce a.button.wc-backward, body.woocommerce .wccm-catalog-item a.button, body.woocommerce a.wccm-button.button, form.woocommerce-form-coupon button.button, div.wpforms-container .wpforms-form button[type=submit].wpforms-submit, div.woocommerce a.button.alt, div.woocommerce table.my_account_orders .button, input[type="submit"].search-submit, .hestia-view-cart-wrapper .added_to_cart.wc-forward, .woocommerce-product-search button, .woocommerce-cart .actions .button, #secondary div[id^=woocommerce_price_filter] .button, .woocommerce div[id^=woocommerce_widget_cart].widget .buttons .button, .searchform input[type=submit], .searchform button, .search-form:not(.media-toolbar-primary) input[type=submit], .search-form:not(.media-toolbar-primary) button, .woocommerce-product-search input[type=submit], .btn.colored-button, .btn.btn-left, .btn.btn-right, .btn:not(.colored-button):not(.btn-left):not(.btn-right):not(.btn-just-icon):not(.menu-item):not(.hestia-sidebar-open):not(.hestia-sidebar-close){border-radius:3px;}
+h1, h2, h3, h4, h5, h6, .hestia-title, .hestia-title.title-in-content, p.meta-in-content , .info-title, .card-title,
+		.page-header.header-small .hestia-title, .page-header.header-small .title, .widget h5, .hestia-title, 
+		.title, .footer-brand, .footer-big h4, .footer-big h5, .media .media-heading, 
+		.carousel h1.hestia-title, .carousel h2.title, 
+		.carousel span.sub-title, .hestia-about h1, .hestia-about h2, .hestia-about h3, .hestia-about h4, .hestia-about h5 {
+			font-family: Dosis;
+		}
+		body, ul, .tooltip-inner {
+			font-family: Dosis;
+		}
+@media (min-width: 769px){
+			.page-header.header-small .hestia-title,
+			.page-header.header-small .title,
+			h1.hestia-title.title-in-content,
+			.main article.section .has-title-font-size {
+				font-size: 42px;
+			}}@media (max-width: 768px){
+			.page-header.header-small .hestia-title,
+			.page-header.header-small .title,
+			h1.hestia-title.title-in-content,
+			.main article.section .has-title-font-size {
+				font-size: 26px;
+			}}@media (max-width: 480px){
+			.page-header.header-small .hestia-title,
+			.page-header.header-small .title,
+			h1.hestia-title.title-in-content,
+			.main article.section .has-title-font-size {
+				font-size: 26px;
+			}}@media (min-width: 769px){
+		.single-post-wrap h1:not(.title-in-content),
+		.page-content-wrap h1:not(.title-in-content),
+		.page-template-template-fullwidth article h1:not(.title-in-content) {
+			font-size: 42px;
+		}
+		.single-post-wrap h2,
+		.page-content-wrap h2,
+		.page-template-template-fullwidth article h2,
+		.main article.section .has-heading-font-size {
+			font-size: 37px;
+		}
+		.single-post-wrap h3,
+		.page-content-wrap h3,
+		.page-template-template-fullwidth article h3 {
+			font-size: 32px;
+		}
+		.single-post-wrap h4,
+		.page-content-wrap h4,
+		.page-template-template-fullwidth article h4 {
+			font-size: 27px;
+		}
+		.single-post-wrap h5,
+		.page-content-wrap h5,
+		.page-template-template-fullwidth article h5 {
+			font-size: 23px;
+		}
+		.single-post-wrap h6,
+		.page-content-wrap h6,
+		.page-template-template-fullwidth article h6 {
+			font-size: 18px;
+		}}@media (min-width: 769px){.single-post-wrap p:not(.meta-in-content), .page-content-wrap p, .single-post-wrap ul, .page-content-wrap ul, .single-post-wrap ol, .page-content-wrap ol, .single-post-wrap dl, .page-content-wrap dl, .single-post-wrap table, .page-content-wrap table, .page-template-template-fullwidth article p, .main article.section .has-body-font-size {
+		font-size: 18px;
+		}}@media (min-width: 769px){#carousel-hestia-generic .hestia-title{
+		font-size: 67px;
+		}#carousel-hestia-generic span.sub-title{
+		font-size: 18px;
+		}#carousel-hestia-generic .btn{
+		font-size: 14px;
+		}}@media (min-width: 769px){
+		section.hestia-features .hestia-title, 
+		section.hestia-shop .hestia-title, 
+		section.hestia-work .hestia-title, 
+		section.hestia-team .hestia-title, 
+		section.hestia-pricing .hestia-title, 
+		section.hestia-ribbon .hestia-title, 
+		section.hestia-testimonials .hestia-title, 
+		section.hestia-subscribe h2.title, 
+		section.hestia-blogs .hestia-title,
+		.section.related-posts .hestia-title,
+		section.hestia-contact .hestia-title{
+			font-size: 37px;
+		}
+		section.hestia-features .hestia-info h4.info-title, 
+		section.hestia-shop h4.card-title, 
+		section.hestia-team h4.card-title, 
+		section.hestia-testimonials h4.card-title, 
+		section.hestia-blogs h4.card-title,
+		.section.related-posts h4.card-title,
+		section.hestia-contact h4.card-title, 
+		section.hestia-contact .hestia-description h6{
+			font-size: 18px;
+		}	
+		section.hestia-work h4.card-title, 
+		section.hestia-contact .hestia-description h5{
+			font-size: 23px;
+		}
+		section.hestia-contact .hestia-description h1{
+			font-size: 42px;
+		}
+		section.hestia-contact .hestia-description h2{
+			font-size: 37px;
+		}
+		section.hestia-contact .hestia-description h3{
+			font-size: 32px;
+		}
+		section.hestia-contact .hestia-description h4{
+			font-size: 27px;
+		}}@media (min-width: 769px){ 
+			section.hestia-features h5.description,
+			section.hestia-shop h5.description,
+			section.hestia-work h5.description,
+			section.hestia-team h5.description,
+			section.hestia-testimonials h5.description,
+			section.hestia-subscribe h5.subscribe-description,
+			section.hestia-blogs h5.description,
+			section.hestia-contact h5.description{
+				font-size: 18px;
+			}}@media (min-width: 769px){
+		section.hestia-team p.card-description,
+		section.hestia-pricing p.text-gray,
+		section.hestia-testimonials p.card-description,
+		section.hestia-blogs p.card-description,
+		.section.related-posts p.card-description,
+		.hestia-contact p,
+		section.hestia-features .hestia-info p,
+		section.hestia-shop .card-description p{
+			font-size: 14px;
+		}
+		section.hestia-shop h6.category,
+		section.hestia-work .label-primary,
+		section.hestia-team h6.category,
+		section.hestia-pricing .card-pricing h6.category,
+		section.hestia-testimonials h6.category,
+		section.hestia-blogs h6.category,
+		.section.related-posts h6.category{
+			font-size: 12px;
+		}}
+
+		.page-template-builder-fullwidth-std .header > .elementor {
+			padding-top: 70px;
+		}
+
+</style>
+<link rel="stylesheet" id="font-awesome-5-all-css" href="../wp-content/themes/hestia/assets/font-awesome/css/all.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-4-shim-css" href="../wp-content/themes/hestia/assets/font-awesome/css/v4-shims.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="hestia-google-font-dosis-css" href="//fonts.googleapis.com/css?family=Dosis%3A300%2C400%2C500%2C700&subset=latin&ver=5.2.5" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-icons-css" href="../wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-animations-css" href="../wp-content/plugins/elementor/assets/lib/animations/animations.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-frontend-css" href="../wp-content/plugins/elementor/assets/css/frontend.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-global-css" href="../wp-content/uploads/elementor/css/global.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-post-16-css" href="../wp-content/uploads/elementor/css/post-16.css" type="text/css" media="all">
+<link rel="stylesheet" id="google-fonts-1-css" href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&ver=5.2.5" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-icons-shared-0-css" href="../wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-icons-fa-solid-css" href="../wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-icons-fa-regular-css" href="../wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css" type="text/css" media="all">
+<script type="text/javascript" src="../wp-includes/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="../wp-includes/js/jquery/jquery-migrate.min.js"></script>
+
+
+
+
+
+
+
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #ffffff; }
+</style>
+	<link rel="icon" href="../wp-content/uploads/2019/12/20281453321536039566-32.png" sizes="32x32">
+<link rel="icon" href="../wp-content/uploads/2019/12/20281453321536039566-32.png" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="../wp-content/uploads/2019/12/20281453321536039566-32.png">
+<meta name="msapplication-TileImage" content="../wp-content/uploads/2019/12/20281453321536039566-32.png">
+		<style type="text/css" id="wp-custom-css">
+			/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  #main-navigation a {
+		font-size: 15px;
+	}
+	
+	h5.description {
+		font-size: 23px !important;
+	}
+	
+	form input,
+	form textarea {
+		font-size: 16px !important;
+	}
+}
+
+.feature-box a {
+	pointer-events: none;
+  cursor: default;
+}
+
+h5.description,
+form input,
+form textarea {
+	font-style: italic;
+}
+
+.card-description p {
+	color: darkslategray;
+}
+
+.card-contact .header,
+#wpforms-submit-270 {
+	background-color: #af4315
+}		</style>
+		</head>
+
+<body class="home page-template-default page page-id-16 custom-background blog-post header-layout-default elementor-default elementor-page elementor-page-16">
+		<div class="wrapper ">
+		<header class="header ">
+			<div style="display: none"></div>		<nav class="navbar navbar-default navbar-fixed-top  navbar-color-on-scroll navbar-transparent hestia_left">
+						<div class="container">
+						<div class="navbar-header">
+			<div class="title-logo-wrapper">
+				<a class="navbar-brand" href="../index.html" title="LOVELY PETS">
+					<p>LOVELY PETS</p></a>
+			</div>
+								<div class="navbar-toggle-wrapper">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navigation">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="sr-only">Toggle Navigation</span>
+			</button>
+					</div>
+				</div>
+		<div id="main-navigation" class="collapse navbar-collapse"><ul id="menu-pagrindinis" class="nav navbar-nav"><li id="menu-item-162" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-162 active"><a title="Home" href="../http://OFFLINEZIP.wpsho">Home</a></li>
+<li id="menu-item-156" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-156 active"><a title="Features" href="../http://OFFLINEZIP.wpsho#features">Features</a></li>
+<li id="menu-item-157" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-157 active"><a title="Pricing" href="../http://OFFLINEZIP.wpsho#about">Pricing</a></li>
+<li id="menu-item-158" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-158 active"><a title="Meet Us" href="../http://OFFLINEZIP.wpsho#team">Meet Us</a></li>
+<li id="menu-item-159" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-159 active"><a title="Reviews" href="../http://OFFLINEZIP.wpsho#testimonials">Reviews</a></li>
+<li id="menu-item-160" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-160 active"><a title="Contact" href="../http://OFFLINEZIP.wpsho#contact">Contact</a></li>
+<li id="menu-item-323" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-323"><a title="BLOG" href="../blog/index.html">BLOG</a></li>
+</ul></div>			</div>
+					</nav>
+				</header>
+		<div id="carousel-hestia-generic" class="carousel slide" data-ride="carousel">
+			<div class="carousel slide" data-ride="carousel">
+				<div class="carousel-inner">
+					
+		<div class="item active">
+			<div class="page-header">
+				
+				<div class="container">
+										<div class="row hestia-big-title-content">
+								<div class="
+		 big-title-slider-content text-center col-sm-8 col-sm-offset-2 		">
+							<h1 class="hestia-title">Pet Care Service <br>In Your Home</h1>
+													<div class="buttons">
+					<a href="../http://OFFLINEZIP.wpsho#features" title="READ MORE" class="btn btn-primary">READ MORE</a>
+									</div>
+					</div>
+							</div>
+									</div>
+
+				<div class="header-filter" style="background-image: url(http://OFFLINEZIP.wpsho/wp-content/uploads/2019/12/freestocks-org-t8SxccV0Agw-unsplash.jpg)"></div>
+							</div>
+		</div>
+						</div>
+			</div>
+		</div>
+			<div class="main  main-raised ">
+				<section class="hestia-features " id="features" data-sorder="hestia_features">
+						<div class="container">
+									<div class="row">
+						<div class="col-md-8 col-md-offset-2 hestia-features-title-area">
+							<h2 class="hestia-title">Features</h2><h5 class="description">How we earn love of our fluffy clients</h5>						</div>
+					</div>
+							<div class="hestia-features-content">
+		<div class="row">				<div class="col-xs-12 col-md-4 feature-box">
+					<div class="hestia-info">
+						<a href="#">									<div class="icon" style="color:#1acea4">
+				<i class="fa fas fa-home"></i>
+										</div>
+																									<h4 class="info-title">Flexible and on-time home visits</h4>
+																				</a>
+													</div>
+				</div>
+								<div class="col-xs-12 col-md-4 feature-box">
+					<div class="hestia-info">
+						<a href="#">									<div class="icon" style="color:#1acea4">
+				<i class="fa fas fa-child"></i>
+										</div>
+																									<h4 class="info-title">Trusted professional pet care</h4>
+																				</a>
+													</div>
+				</div>
+								<div class="col-xs-12 col-md-4 feature-box">
+					<div class="hestia-info">
+						<a href="#">									<div class="icon" style="color:#1acea4">
+				<i class="fa fas fa-heart"></i>
+										</div>
+																									<h4 class="info-title">Kindly accepting any pet</h4>
+																				</a>
+													</div>
+				</div>
+				</div>		</div>
+									</div>
+					</section>
+					<section class="hestia-about section-image" id="about" data-sorder="hestia_about" style="background-image: url('http://OFFLINEZIP.wpsho/wp-content/uploads/2019/12/ludemeula-fernandes-9UUoGaaHtNE-unsplash.jpg');">
+								<div class="container">
+					<div class="row hestia-about-content">
+								<div data-elementor-type="wp-page" data-elementor-id="16" class="elementor elementor-16" data-elementor-settings="[]">
+			<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+							<section class="elementor-element elementor-element-b50be65 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="b50be65" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-debed0a elementor-column elementor-col-100 elementor-top-column" data-id="debed0a" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-133f63a elementor-widget elementor-widget-heading" data-id="133f63a" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Price of visit</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-8dc6546 elementor-widget elementor-widget-spacer" data-id="8dc6546" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<section class="elementor-element elementor-element-364729e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="364729e" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-5f89e44 elementor-column elementor-col-50 elementor-inner-column" data-id="5f89e44" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-0d3a85d elementor-align-left elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list" data-id="0d3a85d" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-key"></i>						</span>
+										<span class="elementor-icon-list-text">Taking and returning keys for free</span>
+									</li>
+								<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="far fa-file-alt"></i>						</span>
+										<span class="elementor-icon-list-text">Signing of the contract</span>
+									</li>
+								<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-paw"></i>						</span>
+										<span class="elementor-icon-list-text">Proper pet care</span>
+									</li>
+								<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="far fa-clock"></i>						</span>
+										<span class="elementor-icon-list-text">Visit time is 40-60 minutes</span>
+									</li>
+						</ul>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-85d069d elementor-column elementor-col-50 elementor-inner-column" data-id="85d069d" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-abf444e elementor-widget elementor-widget-heading" data-id="abf444e" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-xxl">15 €</h2>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-b387538 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="b387538" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-0365182 elementor-column elementor-col-100 elementor-top-column" data-id="0365182" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-737e945 elementor-widget elementor-widget-spacer" data-id="737e945" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-5f4313d elementor-button-success elementor-align-center elementor-widget elementor-widget-button" data-id="5f4313d" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="#" class="elementor-button-link elementor-button elementor-size-md" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">REQUEST A MEETING</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+							</div>
+				</div>
+			</section>
+					<section class="hestia-team " id="team" data-sorder="hestia_team">
+						<div class="container">
+									<div class="row">
+						<div class="col-md-8 col-md-offset-2 text-center hestia-team-title-area">
+							<h2 class="hestia-title">Meet Us</h2>						</div>
+					</div>
+							<div class="hestia-team-content">
+				<div class="row">					<div class="col-xs-12 col-ms-6 col-sm-6">
+						<div class="card card-profile card-plain">
+							<div class="col-md-5">
+								<div class="card-image">
+									<img class="img" src="../wp-content/uploads/2019/12/gaspar-manuel-zaldo-FUxKAdKf4Q4-unsplash.jpg" alt="Kristina team member" title="Kristina Solobev">																	</div>
+							</div>
+							<div class="col-md-7">
+								<div class="content">
+                                    																			<h4 class="card-title">Kristina Solobev</h4>
+																																					<p class="card-description">Even from a young age she’s had a big heart for animals. Kristina has rescued many animals throughout her life, including various birds and rabbits. <br><br>Kristina is excited to be a part of the LOVELY PETS' team and provide excellent care for your pets!</p>
+									                                    																				<div class="footer">
+												<a href="https://www.linkedin.com" target="_blank" class="btn btn-just-icon btn-simple"><i class="fa fab fa-linkedin"></i></a><a href="http://facebook.com" target="_blank" class="btn btn-just-icon btn-simple"><i class="fa fab fa-facebook-f"></i></a>											</div>
+																			</div>
+							</div>
+						</div>
+					</div>
+										<div class="col-xs-12 col-ms-6 col-sm-6">
+						<div class="card card-profile card-plain">
+							<div class="col-md-5">
+								<div class="card-image">
+									<img class="img" src="../wp-content/uploads/2019/12/vince-fleming-j3lf-Jn6deo-unsplash.jpg" alt="Dominik team member" title="Dominik Moss">																	</div>
+							</div>
+							<div class="col-md-7">
+								<div class="content">
+                                    																			<h4 class="card-title">Dominik Moss</h4>
+																																					<p class="card-description">Dominik grew up on a farm with various breeds of dogs, cats and fish along with other larger livestock. His house is full of loving pets, <br><br>Dominik is happy to put his experience and compassion for animals to work with LOVELY PETS.</p>
+									                                    																				<div class="footer">
+												<a href="http://linkedin.com" target="_blank" class="btn btn-just-icon btn-simple"><i class="fa fab fa-linkedin"></i></a><a href="http://facebook.com" target="_blank" class="btn btn-just-icon btn-simple"><i class="fa fab fa-facebook-f"></i></a>											</div>
+																			</div>
+							</div>
+						</div>
+					</div>
+					</div>			</div>
+						</div>
+					</section>
+		        <section class="hestia-ribbon section section-image" id="ribbon" data-sorder="hestia_ribbon" style="background-image: url( http://OFFLINEZIP.wpsho/wp-content/uploads/2019/12/bonnie-kittle-MUcxe_wDurE-unsplash.jpg);">
+			            <div class="container">
+                <div class="row hestia-xs-text-center hestia-like-table hestia-ribbon-content">
+					                    <div class="col-md-8 hestia-ribbon-content-left">
+						                            <h2 class="hestia-title" style="margin:0;">
+								Would like to know the latest news? 
+<br>We are social on Facebook!                            </h2>
+							                    </div>
+                    <div class="col-md-4 text-center hestia-ribbon-content-right">
+						<a href="https://www.facebook.com" target="_blank" class="btn btn-md btn-primary hestia-subscribe-button">SUBSCRIBE</a>                    </div>
+                </div>
+            </div>
+        </section>
+		        <section class="hestia-testimonials " id="testimonials" data-sorder="hestia_testimonials">
+			            <div class="container">
+				                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2 text-center hestia-testimonials-title-area">
+							<h2 class="hestia-title">Reviews</h2><h5 class="description">Our love for pets, reflected on our clients</h5>                        </div>
+                    </div>
+					        <div class="hestia-testimonials-content">
+		<div class="row">                <div class="col-xs-12 col-ms-6 col-sm-6 col-md-4">
+                    <div class="card card-testimonial card-plain">
+						                            <div class="card-avatar">
+								<img class="img" src="../wp-content/uploads/2019/12/frankie-cordoba-E5cYUcKrdbU-unsplash-150x150.jpg" alt="Michaela review" title="Michaela">                            </div>
+						                        <div class="content">
+							                                <h4 class="card-title">Michaela</h4>
+																					                                <p class="card-description">"Thank you very much! My cats were very happy to be under your care. You are the first ones, with whom I did not feel any stress about my pets. I would definitely contact you in the future"</p>
+							                        </div>
+                    </div>
+                </div>
+				                <div class="col-xs-12 col-ms-6 col-sm-6 col-md-4">
+                    <div class="card card-testimonial card-plain">
+						                            <div class="card-avatar">
+								<img class="img" src="../wp-content/uploads/2019/12/panitan-punpuang-TuIcz8wgB74-unsplash-150x150.jpg" alt="Simona review" title="Simona">                            </div>
+						                        <div class="content">
+							                                <h4 class="card-title">Simona</h4>
+																					                                <p class="card-description">"The best pet-sitters that can never be dreamed of! Responsible, dependable, attentive and cute. In your hands my pets are fully in love,  and their houses are always clean and shiny. I am very, very happy that I have found you, who would became not only pet-nannies, but friends of the our family"</p>
+							                        </div>
+                    </div>
+                </div>
+				                <div class="col-xs-12 col-ms-6 col-sm-6 col-md-4">
+                    <div class="card card-testimonial card-plain">
+						                            <div class="card-avatar">
+								<img class="img" src="../wp-content/uploads/2019/12/austin-wade-X6Uj51n5CE8-unsplash-150x150.jpg" alt="Ernest review" title="Ernest">                            </div>
+						                        <div class="content">
+							                                <h4 class="card-title">Ernest</h4>
+																					                                <p class="card-description">"The staff is very friendly and enthusiastic about taking care of my dog. They were sending me regular updates and pictures during the five days I was absent. Although, my dog recently had surgery, they were very kind to take care of it. My dog also seemed to enjoy their company. I would definitely recommend them as a good pet-care service!"</p>
+							                        </div>
+                    </div>
+                </div>
+				</div>        </div>
+		            </div>
+			        </section>
+		        <section class="hestia-clients-bar text-center " id="clients" data-sorder="hestia_clients_bar">
+			            <div class="container">
+				                <ul class="clients-bar-wrapper">
+					<li class="clients-bar-item"><a href="#"><img src="../wp-content/plugins/themeisle-companion/obfx_modules/companion-legacy/inc/hestia/inc/img/clients1.png"></a></li><li class="clients-bar-item"><a href="#"><img src="../wp-content/plugins/themeisle-companion/obfx_modules/companion-legacy/inc/hestia/inc/img/clients2.png"></a></li><li class="clients-bar-item"><a href="#"><img src="../wp-content/plugins/themeisle-companion/obfx_modules/companion-legacy/inc/hestia/inc/img/clients3.png"></a></li>                </ul>
+            </div>
+        </section>
+				<section class="hestia-blogs " id="blog" data-sorder="hestia_blog">
+						<div class="container">
+									<div class="row">
+						<div class="col-md-8 col-md-offset-2 text-center hestia-blogs-title-area">
+							<h2 class="hestia-title">BLOG</h2><h5 class="description">Tips and tricks about pet care</h5>						</div>
+					</div>
+									<div class="hestia-blog-content">
+				<div class="row">			<article class="col-xs-12 col-ms-10 col-ms-offset-1 col-sm-8 col-sm-offset-2 col-md-4 hestia-blog-item">
+				<div class="card card-plain card-blog">
+												<div class="card-image">
+								<a href="../2019/12/05/lorem-ipsum-3/index.html" title="Lorem Ipsum">
+									<img width="360" height="240" src="../wp-content/uploads/2019/12/karlijn-prot-5hMlxeWjVCo-unsplash-360x240.jpg" class="attachment-hestia-blog size-hestia-blog wp-post-image" alt="blog hamster" srcset="../wp-content/uploads/2019/12/karlijn-prot-5hMlxeWjVCo-unsplash-360x240.jpg 360w,../wp-content/uploads/2019/12/karlijn-prot-5hMlxeWjVCo-unsplash-300x199.jpg 300w,../wp-content/uploads/2019/12/karlijn-prot-5hMlxeWjVCo-unsplash-768x509.jpg 768w" sizes="(max-width: 360px) 100vw, 360px">								</a>
+							</div>
+											<div class="content">
+						<h6 class="category"><a href="../category/ipsum/index.html" title="View all posts in Ipsum" rel="tag">Ipsum</a> </h6>
+						<h4 class="card-title entry-title">
+							<a class="blog-item-title-link" href="../2019/12/05/lorem-ipsum-3/index.html" title="Lorem Ipsum" rel="bookmark">
+								Lorem Ipsum							</a>
+						</h4>
+						<p class="card-description">Lorem Ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dignissim sodales ut eu sem integer vitae justo. Commodo ullamcorper a lacus vestibulum sed<a class="moretag" href="../2019/12/05/lorem-ipsum-3/index.html"> Read more…</a></p>
+					</div>
+				</div>
+				</article>
+							<article class="col-xs-12 col-ms-10 col-ms-offset-1 col-sm-8 col-sm-offset-2 col-md-4 hestia-blog-item">
+				<div class="card card-plain card-blog">
+												<div class="card-image">
+								<a href="../2019/12/05/lorem-ipsum-2/index.html" title="Lorem Ipsum">
+									<img width="360" height="240" src="../wp-content/uploads/2019/12/caleb-woods-YqS1xe9o9aU-unsplash-360x240.jpg" class="attachment-hestia-blog size-hestia-blog wp-post-image" alt="blog cat4" srcset="../wp-content/uploads/2019/12/caleb-woods-YqS1xe9o9aU-unsplash-360x240.jpg 360w,../wp-content/uploads/2019/12/caleb-woods-YqS1xe9o9aU-unsplash-300x200.jpg 300w,../wp-content/uploads/2019/12/caleb-woods-YqS1xe9o9aU-unsplash-768x512.jpg 768w,../wp-content/uploads/2019/12/caleb-woods-YqS1xe9o9aU-unsplash-1024x683.jpg 1024w" sizes="(max-width: 360px) 100vw, 360px">								</a>
+							</div>
+											<div class="content">
+						<h6 class="category"><a href="../category/ipsum/index.html" title="View all posts in Ipsum" rel="tag">Ipsum</a> </h6>
+						<h4 class="card-title entry-title">
+							<a class="blog-item-title-link" href="../2019/12/05/lorem-ipsum-2/index.html" title="Lorem Ipsum" rel="bookmark">
+								Lorem Ipsum							</a>
+						</h4>
+						<p class="card-description">Lorem Ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dignissim sodales ut eu sem integer vitae justo. Commodo ullamcorper a lacus vestibulum sed<a class="moretag" href="../2019/12/05/lorem-ipsum-2/index.html"> Read more…</a></p>
+					</div>
+				</div>
+				</article>
+							<article class="col-xs-12 col-ms-10 col-ms-offset-1 col-sm-8 col-sm-offset-2 col-md-4 hestia-blog-item">
+				<div class="card card-plain card-blog">
+												<div class="card-image">
+								<a href="../2019/12/05/lorem-ipsum/index.html" title="Lorem Ipsum">
+									<img width="360" height="240" src="../wp-content/uploads/2019/12/gary-bendig-KvHT4dltPEQ-unsplash-360x240.jpg" class="attachment-hestia-blog size-hestia-blog wp-post-image" alt="" srcset="../wp-content/uploads/2019/12/gary-bendig-KvHT4dltPEQ-unsplash-360x240.jpg 360w,../wp-content/uploads/2019/12/gary-bendig-KvHT4dltPEQ-unsplash-300x200.jpg 300w,../wp-content/uploads/2019/12/gary-bendig-KvHT4dltPEQ-unsplash-768x512.jpg 768w,../wp-content/uploads/2019/12/gary-bendig-KvHT4dltPEQ-unsplash-1024x683.jpg 1024w" sizes="(max-width: 360px) 100vw, 360px">								</a>
+							</div>
+											<div class="content">
+						<h6 class="category"><a href="../category/ipsum/index.html" title="View all posts in Ipsum" rel="tag">Ipsum</a> </h6>
+						<h4 class="card-title entry-title">
+							<a class="blog-item-title-link" href="../2019/12/05/lorem-ipsum/index.html" title="Lorem Ipsum" rel="bookmark">
+								Lorem Ipsum							</a>
+						</h4>
+						<p class="card-description">Lorem Ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dignissim sodales ut eu sem integer vitae justo. Commodo ullamcorper a lacus vestibulum sed<a class="moretag" href="../2019/12/05/lorem-ipsum/index.html"> Read more…</a></p>
+					</div>
+				</div>
+				</article>
+				</div><div class="row"></div>				</div>
+							</div>
+					</section>
+				<section class="hestia-contact contactus section-image" id="contact" data-sorder="hestia_contact" style="background-image: url(http://OFFLINEZIP.wpsho/wp-content/uploads/2019/12/ipet-photo-uELAumR6S0I-unsplash.jpg);">
+						<div class="container">
+								<div class="row">
+					<div class="col-md-5 hestia-contact-title-area">
+													<h2 class="hestia-title">Contact Us</h2>
+																		<div class="hestia-description"><div class="hestia-info info info-horizontal"><div class="icon icon-primary"><i class="fas fa-mobile-alt"></i></div><div class="description"><p class="info-title"></p><h4>+370 000 00000</h4><h4>7/7, 8 AM - 10 PM</h4></div></div><div class="hestia-info info info-horizontal"><div class="icon icon-primary"><i class="fas fa-map-marker-alt"></i></div><div class="description"><h4 class="info-title">Lithuania, Vilnius</h4></div></div></div>					</div>
+											<div class="col-md-5 col-md-offset-2 hestia-contact-form-col">
+							<div class="card card-contact">
+																	<div class="header header-raised header-primary text-center">
+										<h4 class="card-title">REQUEST A MEETING</h4>
+									</div>
+																<div class="content">
+									<div class="wpforms-container wpforms-container-full" id="wpforms-270"><form id="wpforms-form-270" class="wpforms-validate wpforms-form" data-formid="270" method="post" enctype="multipart/form-data" action="/happypets/"><div class="wpforms-field-container"><div id="wpforms-270-field_0-container" class="wpforms-field wpforms-field-name wpforms-one-half wpforms-first" data-field-id="0"><label class="wpforms-field-label wpforms-label-hide" for="wpforms-270-field_0">Name <span class="wpforms-required-label">*</span></label><input type="text" id="wpforms-270-field_0" class="wpforms-field-large wpforms-field-required" name="wpforms[fields][0]" placeholder="Your Name" required></div><div id="wpforms-270-field_3-container" class="wpforms-field wpforms-field-email wpforms-one-half" data-field-id="3"><label class="wpforms-field-label wpforms-label-hide" for="wpforms-270-field_3">Email <span class="wpforms-required-label">*</span></label><input type="email" id="wpforms-270-field_3" class="wpforms-field-large wpforms-field-required" name="wpforms[fields][3]" placeholder="Your Email" required></div><div id="wpforms-270-field_4-container" class="wpforms-field wpforms-field-text" data-field-id="4"><label class="wpforms-field-label wpforms-label-hide" for="wpforms-270-field_4">Subject</label><input type="text" id="wpforms-270-field_4" class="wpforms-field-large" name="wpforms[fields][4]" placeholder="Subject"></div><div id="wpforms-270-field_2-container" class="wpforms-field wpforms-field-textarea" data-field-id="2"><label class="wpforms-field-label wpforms-label-hide" for="wpforms-270-field_2">Message <span class="wpforms-required-label">*</span></label><textarea id="wpforms-270-field_2" class="wpforms-field-medium wpforms-field-required" name="wpforms[fields][2]" placeholder="Your Message" required></textarea></div></div><div class="wpforms-submit-container"><input type="hidden" name="wpforms[id]" value="270"><input type="hidden" name="wpforms[author]" value="1"><input type="hidden" name="wpforms[post_id]" value="16"><button type="submit" name="wpforms[submit]" class="wpforms-submit " id="wpforms-submit-270" value="wpforms-submit" aria-live="assertive" data-alt-text="Sending..." data-submit-text="Send message">Send message</button></div></form></div>  								</div>
+							</div>
+						</div>
+										</div>
+							</div>
+					</section>
+							<footer class="footer footer-black footer-big">
+						<div class="container">
+																<div class="hestia-bottom-footer-content"><ul id="menu-soc-tinklai" class="footer-menu pull-left"><li id="menu-item-47" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-47"><a href="http://facebook.com">Facebook</a></li>
+<li id="menu-item-48" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48"><a href="http://instagram.com">Instagram</a></li>
+<li id="menu-item-253" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-253"><a href="http://twitter.com">twitter</a></li>
+</ul>					<div class="copyright pull-right">
+				Hestia | Powered by WordPress			</div>
+			</div>			</div>
+					</footer>
+				</div>
+	</div>
+		<button class="hestia-scroll-to-top">
+			<i class="fas fa-angle-double-up" aria-hidden="true"></i>
+		</button>
+		<link rel="stylesheet" id="wpforms-full-css" href="../wp-content/plugins/wpforms-lite/assets/css/wpforms-full.css" type="text/css" media="all">
+<script type="text/javascript" src="../wp-content/themes/hestia/assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../wp-includes/js/jquery/ui/core.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var requestpost = {"ajaxurl":"http:\/\/OFFLINEZIP.wpshowp-admin\/admin-ajax.php","disable_autoslide":"","masonry":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="../wp-content/themes/hestia/assets/js/script.min.js"></script>
+<script type="text/javascript" src="../wp-content/plugins/elementor/assets/js/frontend-modules.min.js"></script>
+<script type="text/javascript" src="../wp-includes/js/jquery/ui/position.min.js"></script>
+<script type="text/javascript" src="../wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js"></script>
+<script type="text/javascript" src="../wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js"></script>
+<script type="text/javascript" src="../wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js"></script>
+<script type="text/javascript">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.7.5","urls":{"assets":"http:\/\/OFFLINEZIP.wpshowp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"general":{"elementor_global_image_lightbox":"yes","elementor_enable_lightbox_in_editor":"yes"}},"post":{"id":16,"title":"Titulinis","excerpt":""}};
+</script>
+<script type="text/javascript" src="../wp-content/plugins/elementor/assets/js/frontend.min.js"></script>
+<script type="text/javascript" src="../wp-content/plugins/wpforms-lite/assets/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="../wp-content/plugins/wpforms-lite/assets/js/mailcheck.min.js"></script>
+<script type="text/javascript" src="../wp-content/plugins/wpforms-lite/assets/js/wpforms.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wpforms_settings = {"val_required":"This field is required.","val_url":"Please enter a valid URL.","val_email":"Please enter a valid email address.","val_email_suggestion":"Did you mean {suggestion}?","val_email_suggestion_title":"Click to accept this suggestion.","val_number":"Please enter a valid number.","val_confirm":"Field values do not match.","val_fileextension":"File type is not allowed.","val_filesize":"File exceeds max size allowed. File was not uploaded.","val_time12h":"Please enter time in 12-hour AM\/PM format (eg 8:45 AM).","val_time24h":"Please enter time in 24-hour format (eg 22:45).","val_requiredpayment":"Payment is required.","val_creditcard":"Please enter a valid credit card number.","val_smart_phone":"Please enter a valid phone number.","val_post_max_size":"The total size of the selected files {totalSize} Mb exceeds the allowed limit {maxSize} Mb.","val_checklimit":"You have exceeded the number of allowed selections: {#}.","val_limit_characters":"{count} of {limit} max characters.","val_limit_words":"{count} of {limit} max words.","post_max_size":"41943040","uuid_cookie":"","locale":"en","wpforms_plugin_url":"http:\/\/OFFLINEZIP.wpshowp-content\/plugins\/wpforms-lite\/","gdpr":"","ajaxurl":"http:\/\/OFFLINEZIP.wpshowp-admin\/admin-ajax.php","mailcheck_enabled":"1","mailcheck_domains":[],"mailcheck_toplevel_domains":["dev"]}
+/* ]]> */
+</script>
+</body>
+</html>
